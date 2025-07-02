@@ -1,41 +1,29 @@
-### Service Booking Management
+# Service Booking Management
 
-Service Booking feature for a wellness center offering therapy and spa
+A custom ERPNext module for managing spa and therapy bookings at a wellness center.
 
-### Installation
+---
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+
+## 📦 Features
+
+- Custom Doctype: `Service Booking`
+- Workflow: Requested → Approved → Completed
+- Email notification sent on booking approval
+- Jinja-based Print Format for booking confirmation
+- Custom Report with filters: Service Type & Status
+- Bonus: REST API endpoint to receive bookings via POST (Tested via Postman)
+
+---
+
+## 🛠️ Installation
 
 ```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app service_booking_management
-```
+# Go to your bench folder
+cd ~/frappe-bench
 
-### Contributing
+# Get the app
+bench get-app https://github.com/sandeepgithup/service_booking_management.git
 
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
-
-```bash
-cd apps/service_booking_management
-pre-commit install
-```
-
-Pre-commit is configured to use the following tools for checking and formatting your code:
-
-- ruff
-- eslint
-- prettier
-- pyupgrade
-
-### CI
-
-This app can use GitHub Actions for CI. The following workflows are configured:
-
-- CI: Installs this app and runs unit tests on every push to `develop` branch.
-- Linters: Runs [Frappe Semgrep Rules](https://github.com/frappe/semgrep-rules) and [pip-audit](https://pypi.org/project/pip-audit/) on every pull request.
-
-
-### License
-
-mit
+# Install the app on your site
+bench --site your-site-name install-app service_booking_management
