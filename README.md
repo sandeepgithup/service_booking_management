@@ -12,7 +12,7 @@ A custom ERPNext module for managing spa and therapy bookings at a wellness cent
 - Email notification sent on booking approval
 - Jinja-based Print Format for booking confirmation
 - Custom Report with filters: Service Type & Status
-- Bonus: REST API endpoint to receive bookings via POST (Tested via Postman)
+- Bonus: REST API endpoint to send booking details via GET (Tested via Postman)
 
 ---
 
@@ -27,3 +27,18 @@ bench get-app https://github.com/sandeepgithup/service_booking_management.git
 
 # Install the app on your site
 bench --site your-site-name install-app service_booking_management
+
+
+---
+
+## ⚙️ System Info
+
+| Setting        | Value              |
+|----------------|--------------------|
+| OS             | Ubuntu 22.04       |
+| Python Version | 3.10.17            |
+| Frappe Version | 15.68.1            |
+| ERPNext Version| Not Installed (Custom App Only) |
+| Developer Mode | Enabled            |
+| Tools Used     | VS Code, Postman   |
+
